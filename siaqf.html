@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SI-Based Air Quality Forecast</title>
+
+<style>
+:root {
+    --primary: #17466b;
+    --secondary: #267eaa;
+    --light: #f3f7fa;
+    --text: #263746;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    line-height: 1.65;
+}
+
+header {
+    background: var(--primary);
+    color: white;
+    padding: 22px 8%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+header p {
+    margin: 3px 0;
+    color: #dceaf4;
+}
+
+nav {
+    background: #103650;
+    padding: 12px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 25px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #9ed8f5;
+}
+
+.hero {
+    background: linear-gradient(120deg, #17466b, #3289b5);
+    color: white;
+    padding: 65px 8%;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    max-width: 750px;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 25px;
+}
+
+h2.section-title {
+    color: var(--primary);
+    border-bottom: 2px solid #d9e5ec;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--light);
+    padding: 22px;
+    border-radius: 8px;
+    border: 1px solid #e0e8ee;
+}
+
+.card h3 {
+    color: var(--primary);
+    margin-top: 0;
+}
+
+.download-link {
+    display: inline-block;
+    color: var(--secondary);
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 8px;
+}
+
+.download-link:hover {
+    text-decoration: underline;
+}
+
+.publication {
+    margin-bottom: 18px;
+    padding: 15px;
+    border-left: 4px solid var(--secondary);
+    background: var(--light);
+}
+
+footer {
+    background: #103650;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+}
+
+footer a {
+    color: #b5ddf4;
+}
+
+@media (max-width: 600px) {
+    nav a {
+        display: inline-block;
+        margin: 5px 12px 5px 0;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>SIAQF</h1>
+    <p>Deep Learning-based Air Quality Modeling</p>
+    <p>Atmospheric Composition Modeling and SI/ML Research</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#capabilities">Capabilities</a>
+    <a href="#downloads">Downloads</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+    <h2>ML-Powered Air Quality Forecasting</h2>
+    <p>
+        SIAQF is a SL/ML-based
+        air quality model based on DeepAQM framework designed to
+        provide fast and reliable predictions of
+        atmospheric pollutants, including surface
+        PM2.5 and ozone (O3).
+    </p>
+</section>
+
+<section class="container" id="about">
+    <h2 class="section-title">About SIAQF</h2>
+
+    <p>
+        SIAQF is a deep learning-based air quality
+        modeling system developed to complement
+        traditional physics-based chemical transport
+        models. The framework leverages meteorological
+        information, geographical features, emissions,
+        and air quality observations to predict the
+        spatial and temporal evolution of atmospheric
+        pollutants.
+    </p>
+
+    <p>
+        The system builds upon UFS-DeepAQM with convolutional
+        long short-term memory (ConvLSTM) and
+        other deep learning architectures to emulate
+        the behavior of operational air quality
+        models, enabling computationally efficient
+        air quality predictions.
+    </p>
+</section>
+
+<section class="container" id="capabilities">
+    <h2 class="section-title">Model Capabilities</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>PM2.5 Forecasting</h3>
+            <p>
+                Hourly surface PM2.5 predictions
+                with forecast lead times of up to
+                72 hours.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Ozone Forecasting</h3>
+            <p>
+                High-resolution surface ozone
+                predictions using meteorological
+                and atmospheric composition inputs.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Data Fusion</h3>
+            <p>
+                Integration of air quality
+                observations and model information
+                to improve prediction accuracy.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>SI/ML Model Development</h3>
+            <p>
+                Development of advanced deep learning
+                architectures for atmospheric
+                composition prediction and emulation.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="container" id="downloads">
+    <h2 class="section-title">Downloads</h2>
+
+    <p>
+        Access SIAQF model repository, datasets,
+        forecast products, and documentation.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Model Software</h3>
+            <p>SIAQF Repository</p>
+            <a class="download-link"
+               href="https://github.com/noaa-oar-arl/siaqf">
+               Model Repository →
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Forecast Data</h3>
+            <p>Hourly PM2.5 and ozone forecast datasets.</p>
+            <a class="download-link"
+               href="downloads/data/">
+               Browse Forecast Data →
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Training Data</h3>
+            <p>Datasets used for model development
+               and evaluation.</p>
+            <a class="download-link"
+               href="downloads/training/">
+               Browse Training Data →
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Documentation</h3>
+            <p>User guides, technical documentation,
+               and model configurations.</p>
+            <a class="download-link"
+               href="downloads/documentation/DeepAQM_UserGuide.pdf">
+               Download User Guide →
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="container" id="publications">
+    <h2 class="section-title">
+        Publications and Presentations
+    </h2>
+
+    <div class="publication">
+        <strong>SIAQF: SI/ML-Based Air
+        Quality Modeling</strong>
+        <p>
+            Add publication authors, journal,
+            publication year, and DOI here.
+        </p>
+    </div>
+
+    <div class="publication">
+        <strong>Technical Reports and Presentations</strong>
+        <p>
+            Add technical reports, conference
+            presentations, and project documents.
+        </p>
+    </div>
+</section>
+
+<section class="container" id="contact">
+    <h2 class="section-title">Contact</h2>
+
+    <p>
+        For questions about SIAQF modeling, model data,
+        and collaborations, please contact: youhua.tang@noaa.gov
+    </p>
+
+    <p>
+        Atmospheric Composition Modeling and
+        Emissions Research Team<br>
+        Center for Satellite and Earth Science Research<br>
+        George Mason University
+    </p>
+</section>
+
+<footer>
+    <p>SIAQF | SI/ML-Based Air Quality Modeling</p>
+    <p>
+        © 2026SIAQF Air Quality Forecast Project
+    </p>
+</footer>
+
+</body>
+</html>
+
